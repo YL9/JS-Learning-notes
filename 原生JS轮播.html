@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style lang="text/css">
+        img{
+            width: 100%;
+        }
+        .li_img{
+            width: 800px;
+            float: left;
+            list-style: none;
+        }
+        .ul_img{
+            width: 6000px;
+            padding: 0;
+            margin: 0;
+            transition: all 2s;
+        }
+        .main_div{
+            width: 800px;
+            overflow: hidden;
+            position: relative;
+            top: 100px;
+            left: 350px;
+        }
+        .arrows{
+            z-index: 999;
+            position: absolute;
+            padding-top: 230px;
+            left: 75px;
+            width: 700px;
+        }
+        .arrows span{
+            font-size: 3em;
+            color: seagreen;
+        }
+        .arrows span:hover{
+            cursor: pointer;
+            background-color: rgba(192, 192, 0, 0.29);
+        }
+        .div_btn{
+            float: left;
+            border-radius: 100px;
+            background-color: aquamarine;
+            width: 60px;
+            height: 10px;
+            margin-left: 10px;
+            margin-top: 130px;
+        }
+        .div_btn:hover{
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        var count = 0
+        var isgo = false
+        var timer
+
+        window.onload = function(){
+            var ul_img = document.getElementsByClassName("ul_img")[0]
+            var li_img = document.getElementsByClassName("li_img")
+            var arrow = document.getElementsByClassName("arrow")
+            var div_btn = document.getElementsByClassName("div_btn")
+            div_btn[0].style.backgroundColor = "aqua"
+
+            showtime()
+            function showtime(){
+                timer = setInterval(function(){
+                    
+                })
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- main -->
+    <div class="main_div">
+        <!-- 左右按键 -->
+        <div class="arrows">
+            <span title="0" class="arrow"><</span>
+            <span title="1" class="arrow" style="float:right">></span>
+        </div>
+        <!-- 图片轮播 -->
+        <div class="ul_img">
+            <ul>
+                <li class="li_img"><img src="../image/未来 人造机器人.jpg" alt=""></li>
+                <li class="li_img"><img src="../image/面具 人.jpg" alt=""></li>
+                <li class="li_img"><img src="../image/面具人 科幻.jpg" alt=""></li>
+                <li class="li_img"><img src="../image/未来 人造机器人.jpg" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <!-- main END -->
+    <!-- bottom按钮 -->
+    <div style="margin-left: 600px">
+        <div class="div_btn"></div>
+        <div class="div_btn"></div>
+        <div class="div_btn"></div>
+        <div class="div_btn"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>这是一个JS代码输出的文本</h1>
+    <p id="demo">这是一段文本</p>
+    <button onclick="addWrite()">点击输出</button>
+    <script>
+        document.getElementById("demo").innerHTML = "Hello Word!";
+
+        document.write("<p>这个是直接从Js中输入的一段文本</p>");/* document.write()仅向文档输出内容*/
+        
+        function addWrite(){
+            document.write("其余文本消失！");
+        }
+    </script>
+</body>
+</html>

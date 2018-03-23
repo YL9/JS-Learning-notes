@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-2.1.1.min.js"></script>
+</head>
+<script>
+    $(document).ready(function () {
+        var oTxt1 = document.getElementById('text1')
+        var oTxt2 = document.getElementById('text2')
+        var obtn1 = document.getElementById('btn1')
+        obtn1.onclick = function () {
+            var n1 = parseInt(oTxt1.value)
+            var n2 = parseInt(oTxt2.value)
+            // parseInt --> 字符串(string)转数字(number)
+            if (isNaN(n1)) {
+                alert('您输入的第一个数字有错，请正确填写')
+            } else if (isNaN(n2)) {
+                alert('您输入的第二个数字有错，请正确填写')
+            } else {
+                alert('输入正确')
+                alert(n1 + n2)
+            }
+        }
+    })
+</script>
+
+<body>
+    <input type="text" id="text1" name="">
+    <input type="text" id="text2" name="">
+    <input type="submit" id="btn1" value="求和">
+</body>
+
+</html>

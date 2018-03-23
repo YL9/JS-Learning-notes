@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        // 闭包：子函数(function)可以使用父函数(function)的局部变量
+
+        var a  //全局变量：在任何地方都可以使用 
+        function a(){
+            var a = 12  //局部变量：只能在定义它的函数中使用
+        }
+        function b(){
+            alert(a)
+        }
+        a()
+        b()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

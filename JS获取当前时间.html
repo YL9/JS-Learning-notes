@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var myVar = setInterval(function(){myTimer()},1000)
+        function myTimer(){
+            var d = new Date()
+            var t = d.toLocaleTimeString()
+            document.getElementById("demo").innerHTML = t
+        }
+    </script>
+</head>
+<body>
+    <p>在页面上显示一个时钟</p>
+    <p id="demo"></p>
+</body>
+</html>

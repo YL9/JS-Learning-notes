@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #content{
+            width: 600px;
+            height: 400px;
+            background: rgba(0, 217, 255, 0.815);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -200px;
+            margin-left: -300px;
+        }
+        h3{
+           margin-top: 150px;
+           margin-left: 230px;
+           display: block;
+        }
+        p{
+            margin-top: 20px;
+            margin-left: 200px;
+            display: block;
+        }
+        button{
+            width: 100px;
+            height: 40px;
+            border: none;
+            color: aliceblue;
+            background: red;
+            margin-top: 20px;
+            margin-left: 230px;
+            display: block;
+        }
+        #demo{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p id="demo"></p>
+    <script>
+        /* 定义一个变量，给变量赋值，然后使用getElementById来选中ID，通过innerHTML来输出定义的变量 */
+        var textname = "Hello Word!";
+        document.getElementById("demo").innerHTML =textname;
+    </script> -->
+    <div id="content">
+        <h3>简单运算题</h3>
+        <p>假设y=5，计算x=y+2</p>
+        <button onclick="addCount()">点击输出</button>
+        <p id="demo"></p>
+    </div>
+    <script>
+        function addCount(){
+            var y = 5;
+            var x = y+2;
+            var demo = document.getElementById("demo");
+            demo.innerHTML = " X =" + x;
+        }
+    </script>
+</body>
+</html>
