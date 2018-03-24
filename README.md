@@ -1,2 +1,2 @@
-# JS-Learning-notes
+# JS/Learning notes
 This contains some small examples I wrote when I was learning Javascript.
