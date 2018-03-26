@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS_打印文字</title>
+    <style>
+        div {
+            width: 20%;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -25px;
+            margin-left: -10%;
+            color: orangered;
+        }
+    </style>
+    <script>
+        var str = "文 字 的 打 印 效 果"
+        var index = 0
+
+        function type() {
+            if (index == str.length + 1) {
+                index = 0
+            }
+            document.getElementById("textarea").style.fontSize = "50px"
+            document.getElementById("textarea").innerText = str.substring(0, index++)
+        }
+        setInterval(type, 200)
+    </script>
+</head>
+
+<body>
+    <div id="textarea"></div>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS_文字闪烁</title>
+    <style>
+        div {
+            width: 30%;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -25px;
+            margin-left: -15%;
+            color: orangered;
+            font-size: 50px;
+        }
+    </style>
+    <script>
+        str = "文字的颜色闪烁";
+
+        function color() {
+            r = Math.floor(Math.random() * 256);
+            g = Math.floor(Math.random() * 256);
+            b = Math.floor(Math.random() * 256);
+            return "rgb(" + r + "," + g + "," + b + ")"
+        }
+
+        function word() {
+            document.getElementById("s1").style.color = color();
+            document.getElementById("s2").style.color = color();
+            document.getElementById("s3").style.color = color();
+            document.getElementById("s4").style.color = color();
+            document.getElementById("s5").style.color = color();
+            document.getElementById("s6").style.color = color();
+            document.getElementById("s7").style.color = color();
+        }
+        setInterval(word, 500);
+    </script>
+</head>
+
+<body>
+    <div>
+        <span id="s1">文</span>
+        <span id="s2">字</span>
+        <span id="s3">的</span>
+        <span id="s4">颜</span>
+        <span id="s5">色</span>
+        <span id="s6">闪</span>
+        <span id="s7">烁</span>
+    </div>
+</body>
+
+</html>

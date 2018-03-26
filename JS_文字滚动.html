@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS_文字滚动</title>
+    <style>
+        div {
+            width: 20%;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -25px;
+            margin-left: -10%;
+            color: orangered;
+        }
+    </style>
+    <script>
+        str = "文 字 滚 动 效 果"
+
+        function roll() {
+            str = str.substr(1, str.length) + str.substring(0, 1)
+            document.getElementById("textarea").style.fontSize = "50px"
+            document.getElementById("textarea").innerHTML = str
+        }
+        setInterval(roll, 200)
+    </script>
+</head>
+
+<body>
+    <div id="textarea"></div>
+</body>
+
+</html>
