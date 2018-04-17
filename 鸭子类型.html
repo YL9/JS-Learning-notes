@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let duck = {
+            duckSinging: function () {
+                console.log('1 1 1');
+            }
+        }
+        let chicken = {
+            duckSinging: function () {
+                console.log('2 2 2');
+            }
+        }
+        let choir = []
+
+        let joinChoir = function (animal) {
+            if (animal && typeof animal.duckSinging === 'function') {
+                choir.push(animal)
+                console.log('恭喜加入');
+                console.log('已有人数：' + choir.length);
+            }
+        }
+
+        joinChoir(duck)
+        joinChoir(chicken)
+    </script>
