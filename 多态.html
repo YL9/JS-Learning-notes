@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let makeSound = function (animal) {
+            if (animal instanceof Duck) {
+                console.log('1 1 1');
+            } else if (animal instanceof Chicken) {
+                console.log('2 2 2');
+            }
+        }
+        let Duck = function () { }
+        let Chicken = function () { }
+
+        makeSound(new Duck())
+        makeSound(new Chicken())
+    </script>
+</body>
