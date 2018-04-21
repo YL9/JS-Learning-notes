@@ -61,26 +61,34 @@
         // --------------------------------------------------------------------------
 
         let x = 1
-        for (let i = 0;i < 100;i++) {
-            x = x + i 
+        for (let i = 0; i < 100; i++) {
+            x = x + i
         }
         console.log(x)
 
-        for(let fors in no1){
+        for (let fors in no1) {
             console.log(fors + ' -> forsNo1')
         }
 
-        for(let fors in Aie){
+        for (let fors in Aie) {
             console.log(fors + ' -> forsAie')
             console.log(Aie[fors] + ' -> forsAIE')
         }
 
-        for(let fors in no1){
-            if (no1.hasOwnProperty(fors)){
+        for (let fors in no1) {
+            if (no1.hasOwnProperty(fors)) {
                 console.log(fors + ' -> Forsno1')
             }
         }
 
+
+        let sum = 0;
+        let n = 99;
+        while (n > 0) {
+            sum = sum + n;
+            n = n - 2;
+        }
+        console.log(sum)
 
         // --------------------------------------------------------------------------
 
