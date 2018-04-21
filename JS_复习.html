@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let arr = [1, 2, 3, 4]
+        arr.length = 6
+
+        let Ary = arr.indexOf(4)
+
+        let Ari = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+        let Aric = Ari.slice()
+        let Arid = Ari.slice(0, 3)
+        let Arie = Ari.slice(3)
+
+        Ari.unshift(arr)
+
+        let Aic = ['0', '1', '2', '3', '4', '5', '6']
+        Aic.splice(2, 3, '+1', '+2', '+3')
+
+        let Aid = [
+            [1, 2, 3],
+            [400, 500, 600], '-'
+        ]
+        let X = Aid[1][1]
+
+        let Aie = ['小明', '小红', '大军', '阿黄']
+
+        let no1 = {
+            name: 'xingming',
+            age: 4,
+            school: 'China 1',
+            birth: 1998
+        }
+
+        // --------------------------------------------------------------------------
+
+        let i = 6
+        if (i > 3) {
+            console.log('i > 3')
+        } else {
+            console.log('i < 3')
+        }
+
+        if (i > 3 && i < 6) {
+            console.log('No1')
+        } else if (i >= 6 && i < 10) {
+            console.log('No2')
+        } else {
+            console.log('No3')
+        }
+
+        // --------------------------------------------------------------------------
+
+        let x = 1
+        for (let i = 0;i < 100;i++) {
+            x = x + i 
+        }
+        console.log(x)
+
+        for(let fors in no1){
+            console.log(fors + ' -> forsNo1')
+        }
+
+        for(let fors in Aie){
+            console.log(fors + ' -> forsAie')
+            console.log(Aie[fors] + ' -> forsAIE')
+        }
+
+        
+        // --------------------------------------------------------------------------
+
+        console.log(arr)
+        console.log(Ary)
+        console.log(Aric)
+        console.log(Arid)
+        console.log(Arie)
+
+        console.log('----------------------------------------------------------------')
+
+        console.log(Ari)
+        console.log(Aic)
+        console.log(Aid)
+        console.log(X)
+        console.log('欢迎 ' + Aie[0] + ',' + Aie[1] + ',' + Aie[2] + ',' + Aie[3] + '同学')
+
+        console.log('----------------------------------------------------------------')
+
+        console.log(no1)
+        console.log(no1.name)
+        console.log(no1['name'])
+    </script>
+</body>
+
+</html>
