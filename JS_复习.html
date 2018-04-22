@@ -104,7 +104,7 @@
         console.log('浏览器支持 Map && Set')
 
 
-        let Mic = new Map([     // 快速查找
+        let Mic = new Map([ // 快速查找
             ['Michael', 95],
             ['Bob', 75],
             ['Tracy', 85]
@@ -121,16 +121,27 @@
         console.log(m.get('Adam'))
 
 
-        let s = new Set([1,2,3,3])     // 剔除重复的值
+        let s = new Set([1, 2, 3, 3]) // 剔除重复的值
         console.log(s)
 
 
         // --------------------------------------------------------------------------
 
 
-        Aie.forEach(function(element,index,array){
+        Aie.forEach(function (element, index, array) {
+            // element: 指向当前元素的值
+            // index: 指向当前索引
+            // array: 指向Array对象本身
             console.log(element + ' index = ' + index)
         })
+
+
+        // --------------------------------------------------------------------------
+
+
+
+        
+
 
 
         // --------------------------------------------------------------------------
