@@ -96,7 +96,34 @@
         } while (once < 100);
         console.log(once)
 
-        
+
+        // --------------------------------------------------------------------------
+
+        let map = new Map()
+        let set = new Set()
+        console.log('浏览器支持 Map && Set')
+
+
+        let Mic = new Map([     // 快速查找
+            ['Michael', 95],
+            ['Bob', 75],
+            ['Tracy', 85]
+        ]);
+        console.log(Mic.get('Michael'))
+
+
+        let m = new Map()
+        console.log(m.set('Adam', 67))
+        console.log(m.set('Bob', 59))
+        console.log(m.has('Adam'))
+        console.log(m.get('Adam'))
+        console.log(m.delete('Adam'))
+        console.log(m.get('Adam'))
+
+
+        let s = new Set([1,2,3,3])     // 剔除重复的值
+        console.log(s)
+
 
         // --------------------------------------------------------------------------
 
