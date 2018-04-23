@@ -127,12 +127,12 @@
                     // 捕捉这段代码抛出的所有异常
                     getLenders(amount.value, apr.value, years.value, zipcode.value)
                 }
-                catch(e){/* 忽略这些异常 */}
+                catch (e) {/* 忽略这些异常 */ }
 
                 chart(principal, interest, monthly, payments)       // 用图表展示贷款金额、利息、资产收益
 
             } else {
-                
+
                 // 清空元素的文本内容
                 payment.innerHTML = ""
                 total.innerHTML = ""
@@ -141,7 +141,32 @@
             }
         }
 
-        
+        function save(amount, apr, years, zipcode) {
+
+            // 当浏览器支持时运行此处代码
+            if (window.localStorage) {
+
+                // localStorage -> 本地存储
+                localStorage.loan_amount = amount
+                localStorage.loan_apr = apr
+                localStorage.loan_years = years
+                localStorage.loan_zipcode = zipcode
+            }
+        }
+
+        // 在文档首次加载时 尝试还原输入字段
+        window.onload = function () {
+
+            // 如果浏览器支持本地存储 && 上次保存的值存在
+            if (window.localStorage && localStorage.loan_amount) {
+                document.getElementById("amount").value = localStorage.loan_amount
+                document.getElementById("apr").value = localStorage.loan_apr
+                document.getElementById("years").value = localStorage.loan_years
+                document.getElementById("zipcode").value = localStorage.loan_zipcode
+            }
+        }
+
+
     </script>
 </body>
 
